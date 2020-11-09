@@ -12,14 +12,14 @@ namespace Restaurant_management_app
         List<Pije> _pijet = new List<Pije>();
 
 
-        public Menyja(List<Pije> pijet)
+        public Menyja(Pije pijet)
         {
-            this._pijet = pijet;
+            _pijet.Add(pijet);
         }
 
-        public Menyja(List<Ushqimi> ushqimet)
+        public Menyja(Ushqimi ushqimet)
         {
-            this._ushqimet = ushqimet;
+            _ushqimet.Add(ushqimet);
         }
 
 

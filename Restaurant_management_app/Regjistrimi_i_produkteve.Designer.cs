@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtboxCmimi = new System.Windows.Forms.TextBox();
+            this.btnRegjistro = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboMadhesia = new System.Windows.Forms.ComboBox();
+            this.txtboxPerberes = new System.Windows.Forms.TextBox();
+            this.txtboxEmriProduktit = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboLloji = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,28 +54,31 @@
             this.label4.TabIndex = 17;
             this.label4.Text = "Cmimi i produktit:";
             // 
-            // textBox3
+            // txtboxCmimi
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(199, 150);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(199, 26);
-            this.textBox3.TabIndex = 16;
+            this.txtboxCmimi.Enabled = false;
+            this.txtboxCmimi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxCmimi.Location = new System.Drawing.Point(199, 150);
+            this.txtboxCmimi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtboxCmimi.Name = "txtboxCmimi";
+            this.txtboxCmimi.Size = new System.Drawing.Size(199, 26);
+            this.txtboxCmimi.TabIndex = 16;
             // 
-            // button1
+            // btnRegjistro
             // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(199, 250);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(198, 37);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Regjistro Produktin";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnRegjistro.Enabled = false;
+            this.btnRegjistro.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnRegjistro.FlatAppearance.BorderSize = 2;
+            this.btnRegjistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegjistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegjistro.Location = new System.Drawing.Point(199, 279);
+            this.btnRegjistro.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegjistro.Name = "btnRegjistro";
+            this.btnRegjistro.Size = new System.Drawing.Size(198, 37);
+            this.btnRegjistro.TabIndex = 15;
+            this.btnRegjistro.Text = "Regjistro Produktin";
+            this.btnRegjistro.UseVisualStyleBackColor = true;
+            this.btnRegjistro.Click += new System.EventHandler(this.btnRegjistro_Click);
             // 
             // label3
             // 
@@ -101,67 +106,92 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(73, 62);
+            this.label1.Location = new System.Drawing.Point(71, 75);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 20);
             this.label1.TabIndex = 12;
             this.label1.Text = "Emri i produktit:";
             // 
-            // comboBox1
+            // comboMadhesia
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "E vogel",
-            "E mesme",
-            "E madhe",
-            "Gjysme porcioni",
-            "Porcion i plote"});
-            this.comboBox1.Location = new System.Drawing.Point(199, 106);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(199, 28);
-            this.comboBox1.TabIndex = 10;
+            this.comboMadhesia.Enabled = false;
+            this.comboMadhesia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboMadhesia.FormattingEnabled = true;
+            this.comboMadhesia.Location = new System.Drawing.Point(199, 106);
+            this.comboMadhesia.Margin = new System.Windows.Forms.Padding(2);
+            this.comboMadhesia.Name = "comboMadhesia";
+            this.comboMadhesia.Size = new System.Drawing.Size(199, 28);
+            this.comboMadhesia.TabIndex = 10;
             // 
-            // textBox2
+            // txtboxPerberes
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(199, 193);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(199, 26);
-            this.textBox2.TabIndex = 11;
+            this.txtboxPerberes.Enabled = false;
+            this.txtboxPerberes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxPerberes.Location = new System.Drawing.Point(199, 193);
+            this.txtboxPerberes.Margin = new System.Windows.Forms.Padding(2);
+            this.txtboxPerberes.Multiline = true;
+            this.txtboxPerberes.Name = "txtboxPerberes";
+            this.txtboxPerberes.Size = new System.Drawing.Size(199, 73);
+            this.txtboxPerberes.TabIndex = 11;
             // 
-            // textBox1
+            // txtboxEmriProduktit
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(199, 62);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 26);
-            this.textBox1.TabIndex = 9;
+            this.txtboxEmriProduktit.Enabled = false;
+            this.txtboxEmriProduktit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxEmriProduktit.Location = new System.Drawing.Point(200, 72);
+            this.txtboxEmriProduktit.Margin = new System.Windows.Forms.Padding(2);
+            this.txtboxEmriProduktit.Name = "txtboxEmriProduktit";
+            this.txtboxEmriProduktit.Size = new System.Drawing.Size(199, 26);
+            this.txtboxEmriProduktit.TabIndex = 9;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.comboLloji);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.comboMadhesia);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.txtboxEmriProduktit);
+            this.groupBox1.Controls.Add(this.txtboxCmimi);
+            this.groupBox1.Controls.Add(this.txtboxPerberes);
+            this.groupBox1.Controls.Add(this.btnRegjistro);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(27, 17);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(513, 337);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Regjistrimi i produkteve";
+            // 
+            // comboLloji
+            // 
+            this.comboLloji.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboLloji.FormattingEnabled = true;
+            this.comboLloji.Items.AddRange(new object[] {
+            "Ushqim",
+            "Pije"});
+            this.comboLloji.Location = new System.Drawing.Point(200, 35);
+            this.comboLloji.Margin = new System.Windows.Forms.Padding(2);
+            this.comboLloji.Name = "comboLloji";
+            this.comboLloji.Size = new System.Drawing.Size(199, 28);
+            this.comboLloji.TabIndex = 20;
+            this.comboLloji.TextChanged += new System.EventHandler(this.comboLloji_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(74, 35);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(113, 20);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Lloji i produktit:";
             // 
             // Regjistrimi_i_produkteve
             // 
@@ -169,9 +199,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Regjistrimi_i_produkteve";
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.Regjistrimi_i_produkteve_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -181,14 +212,16 @@
         #endregion
 
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtboxCmimi;
+        private System.Windows.Forms.Button btnRegjistro;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboMadhesia;
+        private System.Windows.Forms.TextBox txtboxPerberes;
+        private System.Windows.Forms.TextBox txtboxEmriProduktit;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox comboLloji;
+        private System.Windows.Forms.Label label5;
     }
 }

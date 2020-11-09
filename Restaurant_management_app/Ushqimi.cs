@@ -50,11 +50,6 @@ namespace Restaurant_management_app
 
         public List<string> Perberesit { get; set; } = new List<string>();
 
-        public Ushqimi(string emri, double cmimi)
-        {
-            Emri_i_ushqimit = emri;
-            Cmimi_i_ushqimit = cmimi;
-        }
 
         public Ushqimi(string emri, string madhesia, double cmimi)
         {
