@@ -9,8 +9,8 @@ namespace Restaurant_management_app
 {
     class Tavolina
     {
-        int _id_e_tavolines = 0;
-        int _numri_i_karrikave = 0;
+        private int _id_e_tavolines = 0;
+        private int _numri_i_karrikave = 0;
 
         public int Id_e_tavolines
         {
@@ -23,13 +23,13 @@ namespace Restaurant_management_app
                 }
                 else
                 {
-                    MessageBox.Show("Keni shenuar id gabim!..");
+                    MessageBox.Show("Keni shenuar id gabim!");
                 }
             }
         }
 
 
-        public int Karrikat
+        public int NumriKarrikave
         {
             get { return _numri_i_karrikave; }
             set
@@ -40,9 +40,15 @@ namespace Restaurant_management_app
                 }
                 else
                 {
-                    MessageBox.Show("Numri i pamjaftueshem i karrikave!..");
+                    MessageBox.Show("Numri i pamjaftueshem i karrikave!");
                 }
             }
+        }
+
+        public Tavolina(int id, int karrikat)
+        {
+            Id_e_tavolines = id;
+            NumriKarrikave = karrikat;
         }
     }
 }

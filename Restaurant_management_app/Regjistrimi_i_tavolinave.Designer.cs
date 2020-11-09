@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbId = new System.Windows.Forms.TextBox();
             this.btnShto = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbNrKarrikat = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
@@ -47,12 +47,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ID e tavolines";
             // 
-            // textBox1
+            // txbId
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.txbId.Location = new System.Drawing.Point(136, 33);
+            this.txbId.Name = "txbId";
+            this.txbId.Size = new System.Drawing.Size(100, 20);
+            this.txbId.TabIndex = 1;
             // 
             // btnShto
             // 
@@ -65,13 +65,14 @@
             this.btnShto.TabIndex = 2;
             this.btnShto.Text = "Shto";
             this.btnShto.UseVisualStyleBackColor = true;
+            this.btnShto.Click += new System.EventHandler(this.btnShto_Click);
             // 
-            // textBox2
+            // txbNrKarrikat
             // 
-            this.textBox2.Location = new System.Drawing.Point(136, 59);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
+            this.txbNrKarrikat.Location = new System.Drawing.Point(136, 59);
+            this.txbNrKarrikat.Name = "txbNrKarrikat";
+            this.txbNrKarrikat.Size = new System.Drawing.Size(100, 20);
+            this.txbNrKarrikat.TabIndex = 4;
             // 
             // label2
             // 
@@ -86,8 +87,8 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txbNrKarrikat);
+            this.groupBox1.Controls.Add(this.txbId);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btnShto);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -113,9 +114,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbId;
         private System.Windows.Forms.Button btnShto;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbNrKarrikat;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
     }

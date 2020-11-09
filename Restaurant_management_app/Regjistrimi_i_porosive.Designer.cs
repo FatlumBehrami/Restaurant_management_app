@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboID = new System.Windows.Forms.ComboBox();
+            this.txbSasia = new System.Windows.Forms.TextBox();
             this.comboLloji = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.btnPerfundoPorosin = new System.Windows.Forms.Button();
             this.btnShtoProduktin = new System.Windows.Forms.Button();
+            this.comboProdukti = new System.Windows.Forms.ComboBox();
+            this.btnPerfundoPorosin = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,24 +51,28 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ID e tavolines";
             // 
-            // comboBox1
+            // comboID
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(132, 24);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 2;
+            this.comboID.FormattingEnabled = true;
+            this.comboID.Location = new System.Drawing.Point(132, 24);
+            this.comboID.Name = "comboID";
+            this.comboID.Size = new System.Drawing.Size(121, 21);
+            this.comboID.TabIndex = 2;
             // 
-            // textBox1
+            // txbSasia
             // 
-            this.textBox1.Location = new System.Drawing.Point(153, 118);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.txbSasia.Enabled = false;
+            this.txbSasia.Location = new System.Drawing.Point(207, 118);
+            this.txbSasia.Name = "txbSasia";
+            this.txbSasia.Size = new System.Drawing.Size(46, 20);
+            this.txbSasia.TabIndex = 1;
             // 
             // comboLloji
             // 
             this.comboLloji.FormattingEnabled = true;
+            this.comboLloji.Items.AddRange(new object[] {
+            "Pije",
+            "Ushqim"});
             this.comboLloji.Location = new System.Drawing.Point(132, 56);
             this.comboLloji.Name = "comboLloji";
             this.comboLloji.Size = new System.Drawing.Size(121, 21);
@@ -97,13 +101,13 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnShtoProduktin);
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.comboProdukti);
             this.groupBox1.Controls.Add(this.btnPerfundoPorosin);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txbSasia);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.comboID);
             this.groupBox1.Controls.Add(this.comboLloji);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -111,13 +115,27 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 
-            // comboBox3
+            // btnShtoProduktin
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(132, 90);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 7;
+            this.btnShtoProduktin.Enabled = false;
+            this.btnShtoProduktin.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.btnShtoProduktin.FlatAppearance.BorderSize = 2;
+            this.btnShtoProduktin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShtoProduktin.Location = new System.Drawing.Point(79, 158);
+            this.btnShtoProduktin.Name = "btnShtoProduktin";
+            this.btnShtoProduktin.Size = new System.Drawing.Size(84, 46);
+            this.btnShtoProduktin.TabIndex = 8;
+            this.btnShtoProduktin.Text = "Shto produktin";
+            this.btnShtoProduktin.UseVisualStyleBackColor = true;
+            // 
+            // comboProdukti
+            // 
+            this.comboProdukti.Enabled = false;
+            this.comboProdukti.FormattingEnabled = true;
+            this.comboProdukti.Location = new System.Drawing.Point(132, 90);
+            this.comboProdukti.Name = "comboProdukti";
+            this.comboProdukti.Size = new System.Drawing.Size(121, 21);
+            this.comboProdukti.TabIndex = 7;
             // 
             // btnPerfundoPorosin
             // 
@@ -131,18 +149,6 @@
             this.btnPerfundoPorosin.Text = "Perfundo porosine";
             this.btnPerfundoPorosin.UseVisualStyleBackColor = true;
             // 
-            // btnShtoProduktin
-            // 
-            this.btnShtoProduktin.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
-            this.btnShtoProduktin.FlatAppearance.BorderSize = 2;
-            this.btnShtoProduktin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShtoProduktin.Location = new System.Drawing.Point(79, 158);
-            this.btnShtoProduktin.Name = "btnShtoProduktin";
-            this.btnShtoProduktin.Size = new System.Drawing.Size(84, 46);
-            this.btnShtoProduktin.TabIndex = 8;
-            this.btnShtoProduktin.Text = "Shto produktin";
-            this.btnShtoProduktin.UseVisualStyleBackColor = true;
-            // 
             // Regjistrimi_i_porosive
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,6 +157,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Regjistrimi_i_porosive";
             this.Text = "Regjistrimi_i_porosive";
+            this.Load += new System.EventHandler(this.Regjistrimi_i_porosive_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -160,13 +167,13 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboID;
+        private System.Windows.Forms.TextBox txbSasia;
         private System.Windows.Forms.ComboBox comboLloji;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboProdukti;
         private System.Windows.Forms.Button btnPerfundoPorosin;
         private System.Windows.Forms.Button btnShtoProduktin;
     }

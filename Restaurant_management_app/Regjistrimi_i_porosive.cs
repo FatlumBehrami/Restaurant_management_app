@@ -17,6 +17,21 @@ namespace Restaurant_management_app
             InitializeComponent();
         }
 
+        private void Regjistrimi_i_porosive_Load(object sender, EventArgs e)
+        {
+            foreach (var item in ListaETavolinave._lista)
+            {
+                comboID.Items.Add(item);
+            }
+            if (comboID.Text != "" && comboLloji.Text != "" && txbSasia.Text != "")
+            {
+
+            }
+
+        }
+
         
+
+       
     }
 }

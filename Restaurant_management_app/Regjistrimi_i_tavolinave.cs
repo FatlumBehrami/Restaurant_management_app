@@ -16,5 +16,21 @@ namespace Restaurant_management_app
         {
             InitializeComponent();
         }
+
+        private void btnShto_Click(object sender, EventArgs e)
+        {
+            try
+            {
+               int id = int.Parse(txbId.Text);
+               int nrKarrikat = int.Parse(txbNrKarrikat.Text);
+                Tavolina tavolina = new Tavolina(id,nrKarrikat);
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            txbId.Clear();
+            txbNrKarrikat.Clear();
+        }
     }
 }

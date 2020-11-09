@@ -8,8 +8,8 @@ namespace Restaurant_management_app
 {
     class Menyja
     {
-        List<Ushqimi> _ushqimet = new List<Ushqimi>();
-        List<Pije> _pijet = new List<Pije>();
+        List<Ushqimi> _ushqimet { get; set; } = new List<Ushqimi>();
+        List<Pije> _pijet { get; set; } = new List<Pije>();
 
 
         public Menyja(Pije pijet)
