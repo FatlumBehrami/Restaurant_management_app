@@ -69,19 +69,30 @@ namespace Restaurant_management_app
             PerfundoPorosi();
         }
 
+        
         void ShtoProdukt()
         {
             Produkti_i_porositur produkti = new Produkti_i_porositur();
             produkti.produkti_i_porositur = comboProdukti.Text;
             produkti.Sasia_e_porosise = int.Parse(txbSasia.Text);
             Porosia.produktet.Add(produkti);
+
+            txbSasia.Clear();
+            comboLloji.Text = "";
+            comboProdukti.Text = "";
+
         }
         void PerfundoPorosi()
         {
             Porosia porosia = new Porosia();
-        porosia.nr_i_tavolines = int.Parse(comboID.Text);
-        List<Produkti_i_porositur> lista = Porosia.produktet;
-        ListaEPorosive.ShtoPorosi(porosia);
+            porosia.Nr_i_tavolines = int.Parse(comboID.Text);
+            List<Produkti_i_porositur> lista = Porosia.produktet;
+            ListaEPorosive.ShtoPorosi(porosia);
+
+            comboID.Text = "";
+            txbSasia.Clear();
+            comboLloji.Text = "";
+            comboProdukti.Text = "";
         }
     }
 }

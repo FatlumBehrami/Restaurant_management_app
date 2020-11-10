@@ -10,9 +10,9 @@ namespace Restaurant_management_app
 {
     class Porosia
     {
-        private int _nr_i_tavolines; 
-        public int nr_i_tavolines {
-            get  { return _nr_i_tavolines; }
+        private int nr_i_tavolines; 
+        public int Nr_i_tavolines {
+            get  { return nr_i_tavolines; }
             set
             {
                 if (value<0)
@@ -21,7 +21,7 @@ namespace Restaurant_management_app
                 }
                 else
                 {
-                    _nr_i_tavolines = value;
+                    nr_i_tavolines = value;
                 }
             }
         }
@@ -31,7 +31,7 @@ namespace Restaurant_management_app
         public Porosia() { }
         public Porosia(string produkti_i_porositur, int sasia_e_porosise)
         {
-            this.nr_i_tavolines = nr_i_tavolines;
+            this.Nr_i_tavolines = Nr_i_tavolines;
             produkti = new Produkti_i_porositur(produkti_i_porositur, sasia_e_porosise);
         }
 
