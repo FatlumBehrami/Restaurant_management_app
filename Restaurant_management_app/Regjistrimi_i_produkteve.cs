@@ -16,15 +16,6 @@ namespace Restaurant_management_app
         {
             InitializeComponent();
         }
-        string[] madhesite = { "E madhe", "E mesme", "E vogel", "Gjysme porcioni", "Porcion i plote" };
-        private void Regjistrimi_i_produkteve_Load(object sender, EventArgs e)
-        {
-            foreach (var item in madhesite)
-            {
-                comboMadhesia.Items.Add(item);
-            }
-            
-        }
 
         private void comboLloji_TextChanged(object sender, EventArgs e)
         {
@@ -73,7 +64,7 @@ namespace Restaurant_management_app
             Clear();
         }
 
-        public void Clear()
+        void Clear()
         {
             txtboxEmriProduktit.Clear();
             txtboxCmimi.Clear();

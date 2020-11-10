@@ -8,11 +8,11 @@ namespace Restaurant_management_app
 {
     class ListaETavolinave
     {
-        public static List<Tavolina> _lista { get; set; } = new List<Tavolina>();
+        public static List<Tavolina> Lista { get; set; } = new List<Tavolina>();
 
         public ListaETavolinave(Tavolina tavolina)
         {
-            _lista.Add(tavolina);
+            Lista.Add(tavolina);
         }
     }
 }

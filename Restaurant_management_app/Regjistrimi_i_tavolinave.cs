@@ -24,6 +24,7 @@ namespace Restaurant_management_app
                int id = int.Parse(txbId.Text);
                int nrKarrikat = int.Parse(txbNrKarrikat.Text);
                 Tavolina tavolina = new Tavolina(id,nrKarrikat);
+                ListaETavolinave.Lista.Add(tavolina);
             }
             catch (FormatException ex)
             {

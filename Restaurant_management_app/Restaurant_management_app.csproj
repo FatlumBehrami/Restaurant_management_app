@@ -68,9 +68,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ListaEPorosive.cs" />
     <Compile Include="ListaETavolinave.cs" />
     <Compile Include="Pije.cs" />
     <Compile Include="Porosia.cs" />
+    <Compile Include="Produkti_i_porositur.cs" />
     <Compile Include="Regjistrimi_i_porosive.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,8 +137,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\test1.jpeg" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

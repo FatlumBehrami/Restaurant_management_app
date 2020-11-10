@@ -118,6 +118,12 @@
             this.comboMadhesia.Enabled = false;
             this.comboMadhesia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboMadhesia.FormattingEnabled = true;
+            this.comboMadhesia.Items.AddRange(new object[] {
+            "E vogel",
+            "E mesme",
+            "E madhe",
+            "Gjysme porcioni",
+            "Porcion i plote"});
             this.comboMadhesia.Location = new System.Drawing.Point(199, 106);
             this.comboMadhesia.Margin = new System.Windows.Forms.Padding(2);
             this.comboMadhesia.Name = "comboMadhesia";
@@ -202,7 +208,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Regjistrimi_i_produkteve";
             this.Text = "Menu";
-            this.Load += new System.EventHandler(this.Regjistrimi_i_produkteve_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
