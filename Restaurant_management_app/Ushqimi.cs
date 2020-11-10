@@ -20,13 +20,13 @@ namespace Restaurant_management_app
             }
             set
             {
-                if (value != "" || value is string)
+                if (value != "")
                 {
                     emri_i_ushqimit = value;
                 }
                 else
                 {
-                    MessageBox.Show("Emri i ushqimit eshte gabim!..");
+                    MessageBox.Show("Emri i ushqimit eshte gabim!");
                 }
             }
         }
