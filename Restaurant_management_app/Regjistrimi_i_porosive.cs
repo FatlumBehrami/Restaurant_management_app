@@ -69,7 +69,7 @@ namespace Restaurant_management_app
             PerfundoPorosi();
         }
 
-        static Porosia porosia = new Porosia();
+        Porosia porosia = new Porosia();
 
         void ShtoProdukt()
         {
