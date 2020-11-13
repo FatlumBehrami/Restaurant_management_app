@@ -22,7 +22,7 @@ namespace Restaurant_management_app
             }
             set
             {
-                if (value != "" || value is string)
+                if (value != "")
                 {
                     emri_i_pijes = value;
                 }
