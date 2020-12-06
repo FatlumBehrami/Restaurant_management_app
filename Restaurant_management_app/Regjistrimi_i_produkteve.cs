@@ -17,50 +17,30 @@ namespace Restaurant_management_app
             InitializeComponent();
         }
 
-        private void comboLloji_TextChanged(object sender, EventArgs e)
-        {
-            if (comboLloji.Text == "Pije")
-            {
-                txtboxEmriProduktit.Enabled = true;
-                btnRegjistro.Enabled = true;
-                txtboxCmimi.Enabled = true;
-            }
-            else
-            {
-                comboMadhesia.Enabled = true;
-                txtboxEmriProduktit.Enabled = true;
-                txtboxPerberes.Enabled = true;
-                btnRegjistro.Enabled = true;
-                txtboxCmimi.Enabled = true;
-            }
-        }
 
         private void btnRegjistro_Click(object sender, EventArgs e)
         {
             Menyja menu;
 
-            if (comboLloji.Text == "Pije")
+            if (txtboxEmriProduktit.Text != "" && comboMadhesia.Text != "" && txtboxCmimi.Text != "" && txtboxPerberes.Text != "")
             {
-                Pije produkti = new Pije(txtboxEmriProduktit.Text,double.Parse(txtboxCmimi.Text));
+                string[] perberesit = txtboxPerberes.Text.Split(',');
+                List<string> listPerberesit = perberesit.ToList();
+                Ushqimi produkti = new Ushqimi(txtboxEmriProduktit.Text, comboMadhesia.Text,double.Parse(txtboxCmimi.Text), listPerberesit);
+                menu = new Menyja(produkti);
+            }
+            else if(txtboxEmriProduktit.Text != "" && comboMadhesia.Text != "" && txtboxCmimi.Text != "")
+            {
+                Ushqimi produkti = new Ushqimi(txtboxEmriProduktit.Text, comboMadhesia.Text, double.Parse(txtboxCmimi.Text));
                 menu = new Menyja(produkti);
             }
             else
             {
-                if (!String.IsNullOrEmpty(txtboxPerberes.Text))
-                {
-                    string[] perberesit = txtboxPerberes.Text.Split(',');
-                    List<string> listPerberesit = perberesit.ToList();
-                    Ushqimi produkti = new Ushqimi(txtboxEmriProduktit.Text, comboMadhesia.Text,
-                        double.Parse(txtboxCmimi.Text), listPerberesit);
-                    menu = new Menyja(produkti);
-                }
-                else
-                {
-                    Ushqimi produkti = new Ushqimi(txtboxEmriProduktit.Text, comboMadhesia.Text,
-                        double.Parse(txtboxCmimi.Text));
-                    menu = new Menyja(produkti);
-                }
+                Ushqimi produkti = new Ushqimi(txtboxEmriProduktit.Text, double.Parse(txtboxCmimi.Text));
+                menu = new Menyja(produkti);
             }
+
+            
             Clear();
         }
 
@@ -70,7 +50,24 @@ namespace Restaurant_management_app
             txtboxCmimi.Clear();
             txtboxPerberes.Clear();
             comboMadhesia.Text = "";
-            comboLloji.Text = "";
+        }
+
+        private void txtboxEmriProduktit_TextChanged(object sender, EventArgs e)
+        {
+            if (txtboxEmriProduktit.Text != "")
+            {
+                btnRegjistro.Enabled = true;
+                txtboxCmimi.Enabled = true;
+                comboMadhesia.Enabled = true;
+                txtboxPerberes.Enabled = true;
+            }
+            else
+            {
+                comboMadhesia.Enabled = false;
+                txtboxPerberes.Enabled = false;
+                btnRegjistro.Enabled = false;
+                txtboxCmimi.Enabled = false;
+            }
         }
     }
 }

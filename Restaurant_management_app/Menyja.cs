@@ -9,13 +9,13 @@ namespace Restaurant_management_app
     class Menyja
     {
         public static List<Ushqimi> Ushqimet { get; set; } = new List<Ushqimi>();
-        public static List<Pije> Pijet { get; set; } = new List<Pije>();
+        //public static List<Pije> Pijet { get; set; } = new List<Pije>();
 
 
-        public Menyja(Pije pijet)
-        {
-            Pijet.Add(pijet);
-        }
+        //public Menyja(Pije pijet)
+        //{
+        //    Pijet.Add(pijet);
+        //}
 
         public Menyja(Ushqimi ushqimet)
         {
