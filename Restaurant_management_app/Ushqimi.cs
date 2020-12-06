@@ -9,6 +9,7 @@ namespace Restaurant_management_app
 {
     class Ushqimi
     {
+        public int Id { get; set; }
         private string emri_i_ushqimit = "";
         private double cmimi_i_ushqimit = 0;
         public string Madhesia_e_ushqimit { get; set; }

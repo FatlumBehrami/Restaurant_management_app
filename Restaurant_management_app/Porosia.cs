@@ -25,15 +25,16 @@ namespace Restaurant_management_app
                 }
             }
         }
+
         Produkti_i_porositur produkti;
         public static List<Produkti_i_porositur> Produktet { get; set; } = new List<Produkti_i_porositur>();
 
         public Porosia() { }
         public Porosia(string produkti_i_porositur, int sasia_e_porosise)
         {
-            this.Nr_i_tavolines = Nr_i_tavolines;
             produkti = new Produkti_i_porositur(produkti_i_porositur, sasia_e_porosise);
         }
+
         public void ShtoProduktet(Produkti_i_porositur produkti)
         {
             Produktet.Add(produkti);

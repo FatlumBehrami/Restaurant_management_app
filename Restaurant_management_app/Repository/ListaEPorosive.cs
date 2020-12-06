@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Restaurant_management_app
 {
-    static class ListaEPorosive
+     class ListaEPorosive
     {
         public static List<Porosia> ListaPorosive { get; set; } = new List<Porosia>();
 

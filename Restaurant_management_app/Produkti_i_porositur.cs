@@ -27,6 +27,10 @@ namespace Restaurant_management_app
             }
         }
         public Produkti_i_porositur() { }
-        public Produkti_i_porositur(string produkti, int sasia) { }
+        public Produkti_i_porositur(string produkti, int sasia)
+        {
+            produkti_i_porositur = produkti;
+            Sasia_e_porosise = sasia;
+        }
     }
 }

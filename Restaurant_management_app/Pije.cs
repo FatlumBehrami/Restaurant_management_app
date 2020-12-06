@@ -10,6 +10,7 @@ namespace Restaurant_management_app
 {
     class Pije
     {
+        public int Id { get; set; }
         private string emri_i_pijes = "";
         private double cmimi_i_pijes = 0.0;
 

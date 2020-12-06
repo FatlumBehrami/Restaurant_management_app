@@ -73,15 +73,11 @@ namespace Restaurant_management_app
 
         void ShtoProdukt()
         {
-            Produkti_i_porositur produkti = new Produkti_i_porositur();
-            produkti.produkti_i_porositur = comboProdukti.Text;
-            produkti.Sasia_e_porosise = int.Parse(txbSasia.Text);
+            Produkti_i_porositur produkti = new Produkti_i_porositur(comboProdukti.Text, int.Parse(txbSasia.Text));
             porosia.ShtoProduktet(produkti);
-
             txbSasia.Clear();
             comboLloji.Text = "";
             comboProdukti.Text = "";
-
         }
         void PerfundoPorosi()
         {

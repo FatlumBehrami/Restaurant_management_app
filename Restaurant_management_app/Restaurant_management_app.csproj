@@ -68,8 +68,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ListaEPorosive.cs" />
-    <Compile Include="ListaETavolinave.cs" />
+    <Compile Include="Repository\ListaEPorosive.cs" />
+    <Compile Include="Repository\ListaETavolinave.cs" />
     <Compile Include="Pije.cs" />
     <Compile Include="Porosia.cs" />
     <Compile Include="Produkti_i_porositur.cs" />
