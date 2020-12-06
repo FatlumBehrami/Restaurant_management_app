@@ -27,31 +27,13 @@ namespace Restaurant_management_app
 
         private void comboID_TextChanged(object sender, EventArgs e)
         {
-            comboLloji.Enabled = true;
-        }
-
-        private void comboLloji_TextChanged(object sender, EventArgs e)
-        {
             comboProdukti.Enabled = true;
-            if (comboLloji.Text=="Pije")
-            {
-                foreach (var item in Menyja.Pijet)
-                {
-                    comboProdukti.Items.Add(item.Emri_i_pijes);
-                }
-            }
-            else
-            {
+            txbSasia.Enabled = true;
+
                 foreach (var item in Menyja.Ushqimet)
                 {
                     comboProdukti.Items.Add(item.Emri_i_ushqimit);
                 }
-            }
-        }
-
-        private void comboProdukti_TextChanged(object sender, EventArgs e)
-        {
-            txbSasia.Enabled = true;
         }
 
         private void txbSasia_TextChanged(object sender, EventArgs e)
@@ -76,7 +58,6 @@ namespace Restaurant_management_app
             Produkti_i_porositur produkti = new Produkti_i_porositur(comboProdukti.Text, int.Parse(txbSasia.Text));
             porosia.ShtoProduktet(produkti);
             txbSasia.Clear();
-            comboLloji.Text = "";
             comboProdukti.Text = "";
         }
         void PerfundoPorosi()
@@ -86,8 +67,8 @@ namespace Restaurant_management_app
 
             comboID.Text = "";
             txbSasia.Clear();
-            comboLloji.Text = "";
             comboProdukti.Text = "";
         }
+
     }
 }
