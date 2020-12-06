@@ -9,9 +9,12 @@ namespace Restaurant_management_app
 {
     class Ushqimi
     {
-        public int Id { get; set; }
+        private int id = 0;
+        public int Id { 
+            get { return id; }
+            set { id = value; } } 
         private string emri_i_ushqimit = "";
-        private double cmimi_i_ushqimit = 0;
+        private decimal cmimi_i_ushqimit = 0;
         public string Madhesia_e_ushqimit { get; set; }
 
         public string Emri_i_ushqimit {
@@ -32,7 +35,7 @@ namespace Restaurant_management_app
             }
         }
 
-        public double Cmimi_i_ushqimit
+        public decimal Cmimi_i_ushqimit
         {
             get { return cmimi_i_ushqimit; }
             set
@@ -51,20 +54,20 @@ namespace Restaurant_management_app
 
         public List<string> Perberesit { get; set; } = new List<string>();
 
-        public Ushqimi(string emri, double cmimi)
+        public Ushqimi(string emri, decimal cmimi)
         {
             Emri_i_ushqimit = emri;
             Cmimi_i_ushqimit = cmimi;
         }
 
-        public Ushqimi(string emri, string madhesia, double cmimi)
+        public Ushqimi(string emri, string madhesia, decimal cmimi)
         {
             Emri_i_ushqimit = emri;
             Madhesia_e_ushqimit = madhesia;
             Cmimi_i_ushqimit = cmimi;
         }
 
-        public Ushqimi(string emri, string madhesia, double cmimi, List<string> perberesit)
+        public Ushqimi(string emri, string madhesia, decimal cmimi, List<string> perberesit)
         {
             Emri_i_ushqimit = emri;
             Madhesia_e_ushqimit = madhesia;

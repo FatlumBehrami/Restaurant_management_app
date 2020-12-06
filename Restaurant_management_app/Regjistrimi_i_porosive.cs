@@ -55,8 +55,15 @@ namespace Restaurant_management_app
 
         void ShtoProdukt()
         {
-            Produkti_i_porositur produkti = new Produkti_i_porositur(comboProdukti.Text, int.Parse(txbSasia.Text));
-            porosia.ShtoProduktet(produkti);
+            foreach (Ushqimi item in Menyja.Ushqimet)
+            {
+                if (comboProdukti.Text == item.Emri_i_ushqimit)
+                {
+                    Produkti_i_porositur produkti = new Produkti_i_porositur(comboProdukti.Text, int.Parse(txbSasia.Text), item.Cmimi_i_ushqimit);
+                    porosia.ShtoProduktet(produkti);
+                }
+            }
+            
             txbSasia.Clear();
             comboProdukti.Text = "";
         }

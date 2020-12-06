@@ -34,5 +34,11 @@ namespace Restaurant_management_app
             Regjistrimi_i_porosive rpo = new Regjistrimi_i_porosive();
             rpo.Show();
         }
+
+        private void btnStatistikat_Click(object sender, EventArgs e)
+        {
+            Statistikat stat = new Statistikat();
+            stat.Show();
+        }
     }
 }

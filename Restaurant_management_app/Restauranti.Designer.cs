@@ -31,6 +31,7 @@
             this.RegjistroProdukte = new System.Windows.Forms.Button();
             this.btnRegjistroTavolinat = new System.Windows.Forms.Button();
             this.btnRegjistroPorosite = new System.Windows.Forms.Button();
+            this.btnStatistikat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // RegjistroProdukte
@@ -75,11 +76,26 @@
             this.btnRegjistroPorosite.UseVisualStyleBackColor = true;
             this.btnRegjistroPorosite.Click += new System.EventHandler(this.btnRegjistroPorosite_Click);
             // 
+            // btnStatistikat
+            // 
+            this.btnStatistikat.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnStatistikat.FlatAppearance.BorderSize = 2;
+            this.btnStatistikat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStatistikat.Location = new System.Drawing.Point(11, 158);
+            this.btnStatistikat.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStatistikat.Name = "btnStatistikat";
+            this.btnStatistikat.Size = new System.Drawing.Size(150, 130);
+            this.btnStatistikat.TabIndex = 5;
+            this.btnStatistikat.Text = "Statistikat";
+            this.btnStatistikat.UseVisualStyleBackColor = true;
+            this.btnStatistikat.Click += new System.EventHandler(this.btnStatistikat_Click);
+            // 
             // Restauranti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(478, 401);
+            this.Controls.Add(this.btnStatistikat);
             this.Controls.Add(this.btnRegjistroPorosite);
             this.Controls.Add(this.btnRegjistroTavolinat);
             this.Controls.Add(this.RegjistroProdukte);
@@ -95,6 +111,7 @@
         private System.Windows.Forms.Button RegjistroProdukte;
         private System.Windows.Forms.Button btnRegjistroTavolinat;
         private System.Windows.Forms.Button btnRegjistroPorosite;
+        private System.Windows.Forms.Button btnStatistikat;
     }
 }
 

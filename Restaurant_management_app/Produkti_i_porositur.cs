@@ -9,7 +9,7 @@ namespace Restaurant_management_app
 {
     class Produkti_i_porositur
     {
-        public string produkti_i_porositur { get; set; }
+        public string ProduktiIPorositur { get; set; }
         private int sasia_e_porosise;
         public int Sasia_e_porosise
         {
@@ -26,11 +26,13 @@ namespace Restaurant_management_app
                 }
             }
         }
+        public decimal Cmimi { get; set; }
         public Produkti_i_porositur() { }
-        public Produkti_i_porositur(string produkti, int sasia)
+        public Produkti_i_porositur(string produkti, int sasia, decimal cmimi)
         {
-            produkti_i_porositur = produkti;
+            ProduktiIPorositur = produkti;
             Sasia_e_porosise = sasia;
+            Cmimi = cmimi;
         }
     }
 }

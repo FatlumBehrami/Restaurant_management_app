@@ -68,9 +68,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Klienti.cs" />
     <Compile Include="Repository\ListaEPorosive.cs" />
     <Compile Include="Repository\ListaETavolinave.cs" />
-    <Compile Include="Pije.cs" />
     <Compile Include="Porosia.cs" />
     <Compile Include="Produkti_i_porositur.cs" />
     <Compile Include="Regjistrimi_i_porosive.cs">
@@ -98,6 +98,12 @@
       <DependentUpon>Regjistrimi_i_produkteve.cs</DependentUpon>
     </Compile>
     <Compile Include="Menyja.cs" />
+    <Compile Include="Statistikat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistikat.Designer.cs">
+      <DependentUpon>Statistikat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ushqimi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -124,6 +130,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Statistikat.resx">
+      <DependentUpon>Statistikat.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
