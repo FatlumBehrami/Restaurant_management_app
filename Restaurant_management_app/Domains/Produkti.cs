@@ -12,21 +12,25 @@ namespace Restaurant_management_app
         private int id = 0;
         public int Id { 
             get { return id; }
-            set { id = value; } } 
-        private string emri_i_ushqimit = "";
-        private decimal cmimi_i_ushqimit = 0;
-        public string Madhesia_e_ushqimit { get; set; }
+            set { id = value; } }
 
-        public string Emri_i_ushqimit {
+        public int NumriShitjeve { get; set; }
+
+        private string emriUshqimit = "";
+        private decimal cmimiUshqimit = 0;
+
+        public string MadhesiaEUshqimit { get; set; }
+
+        public string EmriUshqimit {
             get
             {
-                return emri_i_ushqimit;
+                return emriUshqimit;
             }
             set
             {
                 if (value != "")
                 {
-                    emri_i_ushqimit = value;
+                    emriUshqimit = value;
                 }
                 else
                 {
@@ -35,14 +39,14 @@ namespace Restaurant_management_app
             }
         }
 
-        public decimal Cmimi_i_ushqimit
+        public decimal CmimiUshqimit
         {
-            get { return cmimi_i_ushqimit; }
+            get { return cmimiUshqimit; }
             set
             {
                 if (value > 0)
                 {
-                    cmimi_i_ushqimit = value;
+                    cmimiUshqimit = value;
                 }
                 else
                 {
@@ -54,24 +58,25 @@ namespace Restaurant_management_app
 
         public List<string> Perberesit { get; set; } = new List<string>();
 
+        public Produkti() { }
         public Produkti(string emri, decimal cmimi)
         {
-            Emri_i_ushqimit = emri;
-            Cmimi_i_ushqimit = cmimi;
+            EmriUshqimit = emri;
+            CmimiUshqimit = cmimi;
         }
 
         public Produkti(string emri, string madhesia, decimal cmimi)
         {
-            Emri_i_ushqimit = emri;
-            Madhesia_e_ushqimit = madhesia;
-            Cmimi_i_ushqimit = cmimi;
+            EmriUshqimit = emri;
+            MadhesiaEUshqimit = madhesia;
+            CmimiUshqimit = cmimi;
         }
 
         public Produkti(string emri, string madhesia, decimal cmimi, List<string> perberesit)
         {
-            Emri_i_ushqimit = emri;
-            Madhesia_e_ushqimit = madhesia;
-            Cmimi_i_ushqimit = cmimi;
+            EmriUshqimit = emri;
+            MadhesiaEUshqimit = madhesia;
+            CmimiUshqimit = cmimi;
             Perberesit = perberesit;
         }
     }

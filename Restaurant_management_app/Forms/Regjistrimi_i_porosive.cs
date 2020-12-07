@@ -32,7 +32,7 @@ namespace Restaurant_management_app
 
                 foreach (var item in Menyja.Ushqimet)
                 {
-                    comboProdukti.Items.Add(item.Emri_i_ushqimit);
+                    comboProdukti.Items.Add(item.EmriUshqimit);
                 }
         }
 
@@ -58,9 +58,10 @@ namespace Restaurant_management_app
         {
             foreach (Produkti item in Menyja.Ushqimet)
             {
-                if (comboProdukti.Text == item.Emri_i_ushqimit)
+                if (comboProdukti.Text == item.EmriUshqimit)
                 {
-                    ProduktiItem produkti = new ProduktiItem(comboProdukti.Text, int.Parse(txbSasia.Text), item.Cmimi_i_ushqimit);
+                    ProduktiItem produkti = new ProduktiItem(item, int.Parse(txbSasia.Text));
+                    item.NumriShitjeve += produkti.SasiaEPorosise;
                     porosia.ShtoProdukt(produkti);
                 }
             }

@@ -54,11 +54,11 @@
             // 
             // txbStatistikat
             // 
-            this.txbStatistikat.Location = new System.Drawing.Point(76, 68);
+            this.txbStatistikat.Location = new System.Drawing.Point(39, 68);
             this.txbStatistikat.Multiline = true;
             this.txbStatistikat.Name = "txbStatistikat";
             this.txbStatistikat.ReadOnly = true;
-            this.txbStatistikat.Size = new System.Drawing.Size(309, 279);
+            this.txbStatistikat.Size = new System.Drawing.Size(373, 24);
             this.txbStatistikat.TabIndex = 2;
             // 
             // Statistikat

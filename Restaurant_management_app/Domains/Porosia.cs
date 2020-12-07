@@ -35,9 +35,9 @@ namespace Restaurant_management_app
         public List<ProduktiItem> Produktet = new List<ProduktiItem>();
 
         public Porosia() { }
-        public Porosia(string produkti_i_porositur, int sasia_e_porosise)
+        public Porosia(Produkti produkti_i_porositur, int sasia_e_porosise)
         {
-            produkti.ProduktiIPorositur = produkti_i_porositur;
+            produkti.Ushqimi = produkti_i_porositur;
             produkti.SasiaEPorosise = sasia_e_porosise;
         }
 
@@ -51,7 +51,7 @@ namespace Restaurant_management_app
         {
             foreach (var item in Produktet)
             {
-                cmimiTotal += (item.Cmimi*item.SasiaEPorosise);
+                cmimiTotal += (item.Ushqimi.CmimiUshqimit*item.SasiaEPorosise);
             }
             return cmimiTotal;
         }

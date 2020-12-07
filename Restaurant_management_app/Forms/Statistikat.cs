@@ -16,20 +16,30 @@ namespace Restaurant_management_app
         {
             InitializeComponent();
         }
-
+        
         private void btnShfaq_Click(object sender, EventArgs e)
         {
-            Porosia porosia = new Porosia();
-            MessageBox.Show(porosia.KalkuloFakturen().ToString());
-            
-            //foreach (Porosia item in ListaEPorosive.ListaPorosive)
-            //{\
-            //    MessageBox.Show(item.PorosiID);
-            //}
-            
-                //foreach (Produkti_i_porositur element in Porosia.Produktet)
-                //{
-                //txbStatistikat.Text += "STATISTIKAT" + Environment.NewLine + "Produkti me i shitur: " + element.ProduktiIPorositur + " Sasia :" + element.Sasia_e_porosise;}      
+            Produkti produktiMeIShitur = new Produkti();
+            if (Menyja.Ushqimet.Count > 1)
+            {
+                for (int i = 0; i < Menyja.Ushqimet.Count; i++)
+                {
+                    for (int j = 1; j < Menyja.Ushqimet.Count; j++)
+                    {
+                        if (Menyja.Ushqimet[j].NumriShitjeve > Menyja.Ushqimet[i].NumriShitjeve)
+                        {
+                            produktiMeIShitur = Menyja.Ushqimet[j];
+                        }
+                    }
+                }
+                txbStatistikat.Text += "Produkti me i shitur eshte " + produktiMeIShitur.EmriUshqimit + " me " + produktiMeIShitur.NumriShitjeve + " produkte te shitura.";
+            }
+            else if (Menyja.Ushqimet.Count == 1) {
+                produktiMeIShitur = Menyja.Ushqimet[0];
+                txbStatistikat.Text += "Produkti me i shitur eshte " + produktiMeIShitur.EmriUshqimit + " me    " + produktiMeIShitur.NumriShitjeve + "produkte te shitura.";
+            }
+                
+            else txbStatistikat.Text += "Nuk ka produkte te shitura.";
             
         }
     }

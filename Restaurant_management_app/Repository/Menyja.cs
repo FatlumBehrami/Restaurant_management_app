@@ -10,9 +10,9 @@ namespace Restaurant_management_app
     {
         public static List<Produkti> Ushqimet { get; set; } = new List<Produkti>();
         
-        public Menyja(Produkti ushqimet)
+        public Menyja(Produkti produkti)
         {
-            Add(ushqimet);
+            Add(produkti);
         }
 
         public void Add(Produkti ushqimet)
