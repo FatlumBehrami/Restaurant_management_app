@@ -17,7 +17,7 @@ namespace Restaurant_management_app
             InitializeComponent();
         }
         
-        private void btnShfaq_Click(object sender, EventArgs e)
+        private void btnShfaqProduktin_Click(object sender, EventArgs e)
         {
             Produkti produktiMeIShitur = new Produkti();
             if (Menyja.Ushqimet.Count > 1)

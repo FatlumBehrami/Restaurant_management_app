@@ -40,5 +40,10 @@ namespace Restaurant_management_app
             Statistikat stat = new Statistikat();
             stat.Show();
         }
+
+        private void btnRezervoTavoline_Click(object sender, EventArgs e)
+        {
+            rezer
+        }
     }
 }

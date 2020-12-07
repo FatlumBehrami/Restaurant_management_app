@@ -97,6 +97,7 @@
     <Compile Include="Forms\Regjistrimi_i_produkteve.Designer.cs">
       <DependentUpon>Regjistrimi_i_produkteve.cs</DependentUpon>
     </Compile>
+    <Compile Include="Repository\ListaSherbysve.cs" />
     <Compile Include="Repository\Menyja.cs" />
     <Compile Include="Domains\Sherbyesi.cs" />
     <Compile Include="Forms\Statistikat.cs">
@@ -134,6 +135,21 @@
     <EmbeddedResource Include="Forms\Statistikat.resx">
       <DependentUpon>Statistikat.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\Klienti.datasource" />
+    <None Include="Properties\DataSources\ListaEPorosive.datasource" />
+    <None Include="Properties\DataSources\ListaETavolinave.datasource" />
+    <None Include="Properties\DataSources\Menyja.datasource" />
+    <None Include="Properties\DataSources\Porosia.datasource" />
+    <None Include="Properties\DataSources\Produkti.datasource" />
+    <None Include="Properties\DataSources\ProduktiItem.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\Regjistrimi_i_porosive.datasource" />
+    <None Include="Properties\DataSources\Regjistrimi_i_produkteve.datasource" />
+    <None Include="Properties\DataSources\Regjistrimi_i_tavolinave.datasource" />
+    <None Include="Properties\DataSources\Restauranti.datasource" />
+    <None Include="Properties\DataSources\Sherbyesi.datasource" />
+    <None Include="Properties\DataSources\Statistikat.datasource" />
+    <None Include="Properties\DataSources\Tavolina.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

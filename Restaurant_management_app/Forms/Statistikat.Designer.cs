@@ -28,9 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblProduktetMTPorositura = new System.Windows.Forms.Label();
-            this.btnShfaq = new System.Windows.Forms.Button();
+            this.btnShfaqProduktin = new System.Windows.Forms.Button();
             this.txbStatistikat = new System.Windows.Forms.TextBox();
+            this.porosiaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.listaEPorosiveBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.klientiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.porosiaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaEPorosiveBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klientiBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblProduktetMTPorositura
@@ -42,15 +49,15 @@
             this.lblProduktetMTPorositura.TabIndex = 0;
             this.lblProduktetMTPorositura.Text = "Produktet me te porositura";
             // 
-            // btnShfaq
+            // btnShfaqProduktin
             // 
-            this.btnShfaq.Location = new System.Drawing.Point(193, 39);
-            this.btnShfaq.Name = "btnShfaq";
-            this.btnShfaq.Size = new System.Drawing.Size(75, 23);
-            this.btnShfaq.TabIndex = 1;
-            this.btnShfaq.Text = "Shfaq";
-            this.btnShfaq.UseVisualStyleBackColor = true;
-            this.btnShfaq.Click += new System.EventHandler(this.btnShfaq_Click);
+            this.btnShfaqProduktin.Location = new System.Drawing.Point(193, 39);
+            this.btnShfaqProduktin.Name = "btnShfaqProduktin";
+            this.btnShfaqProduktin.Size = new System.Drawing.Size(75, 23);
+            this.btnShfaqProduktin.TabIndex = 1;
+            this.btnShfaqProduktin.Text = "Shfaq";
+            this.btnShfaqProduktin.UseVisualStyleBackColor = true;
+            this.btnShfaqProduktin.Click += new System.EventHandler(this.btnShfaqProduktin_Click);
             // 
             // txbStatistikat
             // 
@@ -61,16 +68,31 @@
             this.txbStatistikat.Size = new System.Drawing.Size(373, 24);
             this.txbStatistikat.TabIndex = 2;
             // 
+            // porosiaBindingSource
+            // 
+            this.porosiaBindingSource.DataSource = typeof(Restaurant_management_app.Porosia);
+            // 
+            // listaEPorosiveBindingSource
+            // 
+            this.listaEPorosiveBindingSource.DataSource = typeof(Restaurant_management_app.ListaEPorosive);
+            // 
+            // klientiBindingSource
+            // 
+            this.klientiBindingSource.DataSource = typeof(Restaurant_management_app.Klienti);
+            // 
             // Statistikat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(454, 365);
             this.Controls.Add(this.txbStatistikat);
-            this.Controls.Add(this.btnShfaq);
+            this.Controls.Add(this.btnShfaqProduktin);
             this.Controls.Add(this.lblProduktetMTPorositura);
             this.Name = "Statistikat";
             this.Text = "Statistikat";
+            ((System.ComponentModel.ISupportInitialize)(this.porosiaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaEPorosiveBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klientiBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -79,7 +101,10 @@
         #endregion
 
         private System.Windows.Forms.Label lblProduktetMTPorositura;
-        private System.Windows.Forms.Button btnShfaq;
+        private System.Windows.Forms.Button btnShfaqProduktin;
         private System.Windows.Forms.TextBox txbStatistikat;
+        private System.Windows.Forms.BindingSource listaEPorosiveBindingSource;
+        private System.Windows.Forms.BindingSource klientiBindingSource;
+        private System.Windows.Forms.BindingSource porosiaBindingSource;
     }
 }
