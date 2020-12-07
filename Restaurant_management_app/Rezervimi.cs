@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace Restaurant_management_app
 {
-    class ListaERezervimeve
+    class Rezervimi
     {
-        public static List<Rezervimi> ListaRezervimeve = new List<Rezervimi>();
+        public Tavolina Tavolina { get; set; }
+        public DateTime Data { get; set; }
+        public Klienti Klienti { get; set; }
+
+
+
     }
 }

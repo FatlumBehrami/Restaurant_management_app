@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace Restaurant_management_app
 {
-    class Sherbyesi:Personi
+    class Klienti:Personi
     {
-        public int Shitjet { get; set; }
+        public int NrTelefoni { get; set; }
 
-        public void PerfundoShitjen()
+        public Klienti(string emri, int numri)
         {
-            Shitjet++;
+            Emri = emri;
+            NrTelefoni = numri;
         }
     }
 }

@@ -24,7 +24,7 @@ namespace Restaurant_management_app
 
             Sherbyesi sherbyesi = new Sherbyesi();
             sherbyesi.Emri = txbEmri.Text;
-            sherbyesi.SherbyesiID++;
+            sherbyesi.ID++;
             ListaESherbysve.ListaSherbysve.Add(sherbyesi);
         }
     }

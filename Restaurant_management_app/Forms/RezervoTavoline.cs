@@ -16,6 +16,7 @@ namespace Restaurant_management_app
         {
             InitializeComponent();
         }
+        
 
         private void RezervoTavoline_Load(object sender, EventArgs e)
         {
@@ -34,6 +35,22 @@ namespace Restaurant_management_app
                     cmbTavolinat.Items.Add(item.Id_e_tavolines);
                 }
             }
+        }
+        Rezervimi rezervimi = new Rezervimi();
+        private void btnRezervo_Click(object sender, EventArgs e)
+        {
+
+            Klienti klienti = new Klienti(txbEmri.Text, int.Parse(txbNrTelefoni.Text));
+            klienti.ID++;
+            rezervimi.Klienti = klienti;
+            foreach (Tavolina item in ListaETavolinave.Lista)
+            {
+                if (item.Id_e_tavolines == int.Parse(cmbTavolinat.Text))
+                {
+                    rezervimi.Tavolina = item;
+                }
+            }
+            rezervimi.Data = Convert.ToDateTime(txbData.Text);
         }
     }
 }

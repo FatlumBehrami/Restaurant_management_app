@@ -74,6 +74,9 @@
     <Compile Include="Forms\RegjistrimiSherbyesve.Designer.cs">
       <DependentUpon>RegjistrimiSherbyesve.cs</DependentUpon>
     </Compile>
+    <Compile Include="Domains\Personi.cs" />
+    <Compile Include="Domains\Klienti.cs" />
+    <Compile Include="Repository\ListaERezervimeve.cs" />
     <Compile Include="Repository\ListaEPorosive.cs" />
     <Compile Include="Repository\ListaETavolinave.cs" />
     <Compile Include="Domains\Porosia.cs" />
@@ -121,6 +124,7 @@
     <Compile Include="Forms\RezervoTavoline.Designer.cs">
       <DependentUpon>RezervoTavoline.cs</DependentUpon>
     </Compile>
+    <Compile Include="Rezervimi.cs" />
     <EmbeddedResource Include="Forms\RegjistrimiSherbyesve.resx">
       <DependentUpon>RegjistrimiSherbyesve.cs</DependentUpon>
     </EmbeddedResource>

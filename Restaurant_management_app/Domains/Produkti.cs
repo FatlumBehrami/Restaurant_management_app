@@ -9,10 +9,8 @@ namespace Restaurant_management_app
 {
     class Produkti
     {
-        private int id = 0;
-        public int Id { 
-            get { return id; }
-            set { id = value; } }
+        
+        public int Id { get; set; }
 
         public int NumriShitjeve { get; set; }
 

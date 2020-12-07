@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Restaurant_management_app
 {
-    class ListaERezervimeve
+    abstract class Personi
     {
-        public static List<Rezervimi> ListaRezervimeve = new List<Rezervimi>();
+        public int ID { get; set; }
+        public string Emri { get; set; }
     }
 }
