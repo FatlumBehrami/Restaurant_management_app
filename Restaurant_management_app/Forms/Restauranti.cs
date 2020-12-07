@@ -43,7 +43,14 @@ namespace Restaurant_management_app
 
         private void btnRezervoTavoline_Click(object sender, EventArgs e)
         {
-            rezer
+            RezervoTavoline rez = new RezervoTavoline();
+            rez.Show();
+        }
+
+        private void btnRegjistroSherbyes_Click(object sender, EventArgs e)
+        {
+            RegjistrimiSherbyesve sher = new RegjistrimiSherbyesve();
+            sher.Show();
         }
     }
 }

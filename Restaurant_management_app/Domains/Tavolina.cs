@@ -11,7 +11,7 @@ namespace Restaurant_management_app
     {
         private int id_e_tavolines = 0;
         private int numri_i_karrikave = 0;
-        bool eZene = false;
+        public bool eZene = false;
         public int Id_e_tavolines
         {
             get { return id_e_tavolines; }

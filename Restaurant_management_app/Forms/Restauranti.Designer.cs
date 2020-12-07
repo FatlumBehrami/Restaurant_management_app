@@ -33,6 +33,7 @@
             this.btnRegjistroPorosite = new System.Windows.Forms.Button();
             this.btnStatistikat = new System.Windows.Forms.Button();
             this.btnRezervoTavoline = new System.Windows.Forms.Button();
+            this.btnRegjistroSherbyes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // RegjistroProdukte
@@ -68,7 +69,7 @@
             this.btnRegjistroPorosite.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnRegjistroPorosite.FlatAppearance.BorderSize = 2;
             this.btnRegjistroPorosite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegjistroPorosite.Location = new System.Drawing.Point(319, 11);
+            this.btnRegjistroPorosite.Location = new System.Drawing.Point(11, 145);
             this.btnRegjistroPorosite.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegjistroPorosite.Name = "btnRegjistroPorosite";
             this.btnRegjistroPorosite.Size = new System.Drawing.Size(150, 130);
@@ -82,7 +83,7 @@
             this.btnStatistikat.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnStatistikat.FlatAppearance.BorderSize = 2;
             this.btnStatistikat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStatistikat.Location = new System.Drawing.Point(317, 145);
+            this.btnStatistikat.Location = new System.Drawing.Point(319, 145);
             this.btnStatistikat.Margin = new System.Windows.Forms.Padding(2);
             this.btnStatistikat.Name = "btnStatistikat";
             this.btnStatistikat.Size = new System.Drawing.Size(150, 130);
@@ -96,7 +97,7 @@
             this.btnRezervoTavoline.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnRezervoTavoline.FlatAppearance.BorderSize = 2;
             this.btnRezervoTavoline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRezervoTavoline.Location = new System.Drawing.Point(11, 145);
+            this.btnRezervoTavoline.Location = new System.Drawing.Point(165, 145);
             this.btnRezervoTavoline.Margin = new System.Windows.Forms.Padding(2);
             this.btnRezervoTavoline.Name = "btnRezervoTavoline";
             this.btnRezervoTavoline.Size = new System.Drawing.Size(150, 130);
@@ -105,11 +106,26 @@
             this.btnRezervoTavoline.UseVisualStyleBackColor = true;
             this.btnRezervoTavoline.Click += new System.EventHandler(this.btnRezervoTavoline_Click);
             // 
+            // btnRegjistroSherbyes
+            // 
+            this.btnRegjistroSherbyes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnRegjistroSherbyes.FlatAppearance.BorderSize = 2;
+            this.btnRegjistroSherbyes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegjistroSherbyes.Location = new System.Drawing.Point(319, 11);
+            this.btnRegjistroSherbyes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegjistroSherbyes.Name = "btnRegjistroSherbyes";
+            this.btnRegjistroSherbyes.Size = new System.Drawing.Size(150, 130);
+            this.btnRegjistroSherbyes.TabIndex = 7;
+            this.btnRegjistroSherbyes.Text = "Regjistro sherbyes";
+            this.btnRegjistroSherbyes.UseVisualStyleBackColor = true;
+            this.btnRegjistroSherbyes.Click += new System.EventHandler(this.btnRegjistroSherbyes_Click);
+            // 
             // Restauranti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(478, 401);
+            this.Controls.Add(this.btnRegjistroSherbyes);
             this.Controls.Add(this.btnRezervoTavoline);
             this.Controls.Add(this.btnStatistikat);
             this.Controls.Add(this.btnRegjistroPorosite);
@@ -129,6 +145,7 @@
         private System.Windows.Forms.Button btnRegjistroPorosite;
         private System.Windows.Forms.Button btnStatistikat;
         private System.Windows.Forms.Button btnRezervoTavoline;
+        private System.Windows.Forms.Button btnRegjistroSherbyes;
     }
 }
 

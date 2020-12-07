@@ -6,14 +6,7 @@ using System.Threading.Tasks;
 
 namespace Restaurant_management_app
 {
-    class Klienti
+    class ListaERezervimeve
     {
-        public int CostumerID { get; set; }
-
-
-        public void BejPorosi()
-        {
-
-        }
     }
 }

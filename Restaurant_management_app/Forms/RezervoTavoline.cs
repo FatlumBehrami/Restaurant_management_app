@@ -16,5 +16,24 @@ namespace Restaurant_management_app
         {
             InitializeComponent();
         }
+
+        private void RezervoTavoline_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        
+
+        private void btnKerko_Click(object sender, EventArgs e)
+        {
+            cmbTavolinat.Items.Clear();
+            foreach (Tavolina item in ListaETavolinave.Lista)
+            {
+                if (item.eZene == false && item.NumriKarrikave == int.Parse(txbNr.Text))
+                {
+                    cmbTavolinat.Items.Add(item.Id_e_tavolines);
+                }
+            }
+        }
     }
 }

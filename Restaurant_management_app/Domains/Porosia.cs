@@ -12,6 +12,10 @@ namespace Restaurant_management_app
     {
         public int PorosiID { get; set; }
 
+        public Sherbyesi Sherbyesi { get; set; }
+
+        public DateTime Date = DateTime.Today;
+
         private int nrITavolines; 
         public int NrITavolines {
             get  { return nrITavolines; }
@@ -35,10 +39,12 @@ namespace Restaurant_management_app
         public List<ProduktiItem> Produktet = new List<ProduktiItem>();
 
         public Porosia() { }
-        public Porosia(Produkti produkti_i_porositur, int sasia_e_porosise)
+
+        public Porosia(Produkti produkti_i_porositur, int sasia_e_porosise, Sherbyesi sherbyesi)
         {
             produkti.Ushqimi = produkti_i_porositur;
             produkti.SasiaEPorosise = sasia_e_porosise;
+            Sherbyesi = sherbyesi;
         }
 
         public void ShtoProdukt(ProduktiItem produkti)

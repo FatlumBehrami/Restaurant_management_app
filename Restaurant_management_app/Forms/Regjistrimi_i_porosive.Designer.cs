@@ -34,11 +34,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txbCmimiTotal = new System.Windows.Forms.TextBox();
             this.btnShtoProduktin = new System.Windows.Forms.Button();
             this.comboProdukti = new System.Windows.Forms.ComboBox();
             this.btnPerfundoPorosin = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txbCmimiTotal = new System.Windows.Forms.TextBox();
+            this.cmbSherbyesi = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +66,7 @@
             // txbSasia
             // 
             this.txbSasia.Enabled = false;
-            this.txbSasia.Location = new System.Drawing.Point(200, 91);
+            this.txbSasia.Location = new System.Drawing.Point(198, 75);
             this.txbSasia.Name = "txbSasia";
             this.txbSasia.Size = new System.Drawing.Size(46, 20);
             this.txbSasia.TabIndex = 1;
@@ -74,7 +76,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(135, 54);
+            this.label2.Location = new System.Drawing.Point(134, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 18);
             this.label2.TabIndex = 4;
@@ -84,7 +86,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(148, 90);
+            this.label3.Location = new System.Drawing.Point(146, 74);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 18);
             this.label3.TabIndex = 5;
@@ -92,6 +94,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbSherbyesi);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txbCmimiTotal);
             this.groupBox1.Controls.Add(this.btnShtoProduktin);
@@ -107,42 +111,6 @@
             this.groupBox1.Size = new System.Drawing.Size(422, 233);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
-            // 
-            // btnShtoProduktin
-            // 
-            this.btnShtoProduktin.Enabled = false;
-            this.btnShtoProduktin.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
-            this.btnShtoProduktin.FlatAppearance.BorderSize = 2;
-            this.btnShtoProduktin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShtoProduktin.Location = new System.Drawing.Point(113, 158);
-            this.btnShtoProduktin.Name = "btnShtoProduktin";
-            this.btnShtoProduktin.Size = new System.Drawing.Size(84, 46);
-            this.btnShtoProduktin.TabIndex = 8;
-            this.btnShtoProduktin.Text = "Shto produktin";
-            this.btnShtoProduktin.UseVisualStyleBackColor = true;
-            this.btnShtoProduktin.Click += new System.EventHandler(this.btnShtoProduktin_Click);
-            // 
-            // comboProdukti
-            // 
-            this.comboProdukti.Enabled = false;
-            this.comboProdukti.FormattingEnabled = true;
-            this.comboProdukti.Location = new System.Drawing.Point(200, 57);
-            this.comboProdukti.Name = "comboProdukti";
-            this.comboProdukti.Size = new System.Drawing.Size(121, 21);
-            this.comboProdukti.TabIndex = 7;
-            // 
-            // btnPerfundoPorosin
-            // 
-            this.btnPerfundoPorosin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnPerfundoPorosin.FlatAppearance.BorderSize = 2;
-            this.btnPerfundoPorosin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerfundoPorosin.Location = new System.Drawing.Point(204, 158);
-            this.btnPerfundoPorosin.Name = "btnPerfundoPorosin";
-            this.btnPerfundoPorosin.Size = new System.Drawing.Size(84, 46);
-            this.btnPerfundoPorosin.TabIndex = 6;
-            this.btnPerfundoPorosin.Text = "Perfundo porosine";
-            this.btnPerfundoPorosin.UseVisualStyleBackColor = true;
-            this.btnPerfundoPorosin.Click += new System.EventHandler(this.btnPerfundoPorosin_Click);
             // 
             // label4
             // 
@@ -162,6 +130,60 @@
             this.txbCmimiTotal.ReadOnly = true;
             this.txbCmimiTotal.Size = new System.Drawing.Size(46, 20);
             this.txbCmimiTotal.TabIndex = 9;
+            // 
+            // btnShtoProduktin
+            // 
+            this.btnShtoProduktin.Enabled = false;
+            this.btnShtoProduktin.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.btnShtoProduktin.FlatAppearance.BorderSize = 2;
+            this.btnShtoProduktin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShtoProduktin.Location = new System.Drawing.Point(113, 158);
+            this.btnShtoProduktin.Name = "btnShtoProduktin";
+            this.btnShtoProduktin.Size = new System.Drawing.Size(84, 46);
+            this.btnShtoProduktin.TabIndex = 8;
+            this.btnShtoProduktin.Text = "Shto produktin";
+            this.btnShtoProduktin.UseVisualStyleBackColor = true;
+            this.btnShtoProduktin.Click += new System.EventHandler(this.btnShtoProduktin_Click);
+            // 
+            // comboProdukti
+            // 
+            this.comboProdukti.Enabled = false;
+            this.comboProdukti.FormattingEnabled = true;
+            this.comboProdukti.Location = new System.Drawing.Point(199, 48);
+            this.comboProdukti.Name = "comboProdukti";
+            this.comboProdukti.Size = new System.Drawing.Size(121, 21);
+            this.comboProdukti.TabIndex = 7;
+            // 
+            // btnPerfundoPorosin
+            // 
+            this.btnPerfundoPorosin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnPerfundoPorosin.FlatAppearance.BorderSize = 2;
+            this.btnPerfundoPorosin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfundoPorosin.Location = new System.Drawing.Point(204, 158);
+            this.btnPerfundoPorosin.Name = "btnPerfundoPorosin";
+            this.btnPerfundoPorosin.Size = new System.Drawing.Size(84, 46);
+            this.btnPerfundoPorosin.TabIndex = 6;
+            this.btnPerfundoPorosin.Text = "Perfundo porosine";
+            this.btnPerfundoPorosin.UseVisualStyleBackColor = true;
+            this.btnPerfundoPorosin.Click += new System.EventHandler(this.btnPerfundoPorosin_Click);
+            // 
+            // cmbSherbyesi
+            // 
+            this.cmbSherbyesi.FormattingEnabled = true;
+            this.cmbSherbyesi.Location = new System.Drawing.Point(198, 101);
+            this.cmbSherbyesi.Name = "cmbSherbyesi";
+            this.cmbSherbyesi.Size = new System.Drawing.Size(121, 21);
+            this.cmbSherbyesi.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(118, 101);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 18);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Sherbyesi";
             // 
             // Regjistrimi_i_porosive
             // 
@@ -191,5 +213,7 @@
         private System.Windows.Forms.Button btnShtoProduktin;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txbCmimiTotal;
+        private System.Windows.Forms.ComboBox cmbSherbyesi;
+        private System.Windows.Forms.Label label5;
     }
 }

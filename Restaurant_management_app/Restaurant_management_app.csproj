@@ -68,7 +68,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domains\Klienti.cs" />
+    <Compile Include="Forms\RegjistrimiSherbyesve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegjistrimiSherbyesve.Designer.cs">
+      <DependentUpon>RegjistrimiSherbyesve.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repository\ListaEPorosive.cs" />
     <Compile Include="Repository\ListaETavolinave.cs" />
     <Compile Include="Domains\Porosia.cs" />
@@ -97,7 +102,7 @@
     <Compile Include="Forms\Regjistrimi_i_produkteve.Designer.cs">
       <DependentUpon>Regjistrimi_i_produkteve.cs</DependentUpon>
     </Compile>
-    <Compile Include="Repository\ListaSherbysve.cs" />
+    <Compile Include="Repository\ListaESherbysve.cs" />
     <Compile Include="Repository\Menyja.cs" />
     <Compile Include="Domains\Sherbyesi.cs" />
     <Compile Include="Forms\Statistikat.cs">
@@ -110,6 +115,15 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Domains\Tavolina.cs" />
+    <Compile Include="Forms\RezervoTavoline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RezervoTavoline.Designer.cs">
+      <DependentUpon>RezervoTavoline.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\RegjistrimiSherbyesve.resx">
+      <DependentUpon>RegjistrimiSherbyesve.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Regjistrimi_i_porosive.resx">
       <DependentUpon>Regjistrimi_i_porosive.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Restauranti.resx">
       <DependentUpon>Restauranti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RezervoTavoline.resx">
+      <DependentUpon>RezervoTavoline.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -135,21 +152,6 @@
     <EmbeddedResource Include="Forms\Statistikat.resx">
       <DependentUpon>Statistikat.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Properties\DataSources\Klienti.datasource" />
-    <None Include="Properties\DataSources\ListaEPorosive.datasource" />
-    <None Include="Properties\DataSources\ListaETavolinave.datasource" />
-    <None Include="Properties\DataSources\Menyja.datasource" />
-    <None Include="Properties\DataSources\Porosia.datasource" />
-    <None Include="Properties\DataSources\Produkti.datasource" />
-    <None Include="Properties\DataSources\ProduktiItem.datasource" />
-    <None Include="Properties\DataSources\Program.datasource" />
-    <None Include="Properties\DataSources\Regjistrimi_i_porosive.datasource" />
-    <None Include="Properties\DataSources\Regjistrimi_i_produkteve.datasource" />
-    <None Include="Properties\DataSources\Regjistrimi_i_tavolinave.datasource" />
-    <None Include="Properties\DataSources\Restauranti.datasource" />
-    <None Include="Properties\DataSources\Sherbyesi.datasource" />
-    <None Include="Properties\DataSources\Statistikat.datasource" />
-    <None Include="Properties\DataSources\Tavolina.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -163,6 +165,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

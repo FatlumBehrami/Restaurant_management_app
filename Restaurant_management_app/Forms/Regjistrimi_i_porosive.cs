@@ -16,13 +16,18 @@ namespace Restaurant_management_app
         {
             InitializeComponent();
         }
+
         private void Regjistrimi_i_porosive_Load(object sender, EventArgs e)
         {
             foreach (var item in ListaETavolinave.Lista)
             {
                 comboID.Items.Add(item.Id_e_tavolines);
             }
-            
+
+            foreach (Sherbyesi item in ListaESherbysve.ListaSherbysve)
+            {
+                cmbSherbyesi.Items.Add(item.Emri);
+            }
         }
 
         private void comboID_TextChanged(object sender, EventArgs e)
@@ -71,14 +76,29 @@ namespace Restaurant_management_app
         }
         void PerfundoPorosi()
         {
+            foreach (Sherbyesi item in ListaESherbysve.ListaSherbysve)
+            {
+                if (cmbSherbyesi.Text == item.Emri)
+                {
+                    porosia.Sherbyesi = item;
+                    item.PerfundoShitjen();
+                }
+            }
+
+            
             porosia.NrITavolines = int.Parse(comboID.Text);
             porosia.PorosiID++;
             ListaEPorosive.ShtoPorosi(porosia);
 
+            Clear();
+            
+        }
+        void Clear()
+        {
+            cmbSherbyesi.Text = "";
             comboID.Text = "";
             txbSasia.Clear();
             comboProdukti.Text = "";
         }
-
     }
 }

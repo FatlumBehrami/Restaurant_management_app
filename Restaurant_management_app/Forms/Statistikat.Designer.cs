@@ -78,7 +78,6 @@
             // 
             // klientiBindingSource
             // 
-            this.klientiBindingSource.DataSource = typeof(Restaurant_management_app.Klienti);
             // 
             // Statistikat
             // 
