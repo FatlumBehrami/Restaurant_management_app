@@ -12,6 +12,11 @@ namespace Restaurant_management_app
 
         public ListaETavolinave(Tavolina tavolina)
         {
+            Add(tavolina);
+        }
+
+        public void Add(Tavolina tavolina)
+        {
             Lista.Add(tavolina);
         }
     }

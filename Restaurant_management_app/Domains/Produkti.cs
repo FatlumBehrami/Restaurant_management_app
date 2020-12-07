@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Restaurant_management_app
 {
-    class Ushqimi
+    class Produkti
     {
         private int id = 0;
         public int Id { 
@@ -54,20 +54,20 @@ namespace Restaurant_management_app
 
         public List<string> Perberesit { get; set; } = new List<string>();
 
-        public Ushqimi(string emri, decimal cmimi)
+        public Produkti(string emri, decimal cmimi)
         {
             Emri_i_ushqimit = emri;
             Cmimi_i_ushqimit = cmimi;
         }
 
-        public Ushqimi(string emri, string madhesia, decimal cmimi)
+        public Produkti(string emri, string madhesia, decimal cmimi)
         {
             Emri_i_ushqimit = emri;
             Madhesia_e_ushqimit = madhesia;
             Cmimi_i_ushqimit = cmimi;
         }
 
-        public Ushqimi(string emri, string madhesia, decimal cmimi, List<string> perberesit)
+        public Produkti(string emri, string madhesia, decimal cmimi, List<string> perberesit)
         {
             Emri_i_ushqimit = emri;
             Madhesia_e_ushqimit = madhesia;

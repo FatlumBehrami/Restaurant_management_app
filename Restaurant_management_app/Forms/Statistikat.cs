@@ -23,7 +23,7 @@ namespace Restaurant_management_app
             MessageBox.Show(porosia.KalkuloFakturen().ToString());
             
             //foreach (Porosia item in ListaEPorosive.ListaPorosive)
-            //{
+            //{\
             //    MessageBox.Show(item.PorosiID);
             //}
             

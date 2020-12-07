@@ -26,19 +26,19 @@ namespace Restaurant_management_app
             {
                 string[] perberesit = txtboxPerberes.Text.Split(',');
                 List<string> listPerberesit = perberesit.ToList();
-                Ushqimi produkti = new Ushqimi(txtboxEmriProduktit.Text, comboMadhesia.Text,decimal.Parse(txtboxCmimi.Text), listPerberesit);
+                Produkti produkti = new Produkti(txtboxEmriProduktit.Text, comboMadhesia.Text,decimal.Parse(txtboxCmimi.Text), listPerberesit);
                 menu = new Menyja(produkti);
                 produkti.Id++;
             }
             else if(txtboxEmriProduktit.Text != "" && comboMadhesia.Text != "" && txtboxCmimi.Text != "")
             {
-                Ushqimi produkti = new Ushqimi(txtboxEmriProduktit.Text, comboMadhesia.Text, decimal.Parse(txtboxCmimi.Text));
+                Produkti produkti = new Produkti(txtboxEmriProduktit.Text, comboMadhesia.Text, decimal.Parse(txtboxCmimi.Text));
                 menu = new Menyja(produkti);
                 produkti.Id++;
             }
             else
             {
-                Ushqimi produkti = new Ushqimi(txtboxEmriProduktit.Text, decimal.Parse(txtboxCmimi.Text));
+                Produkti produkti = new Produkti(txtboxEmriProduktit.Text, decimal.Parse(txtboxCmimi.Text));
                 menu = new Menyja(produkti);
                 produkti.Id++;
             }

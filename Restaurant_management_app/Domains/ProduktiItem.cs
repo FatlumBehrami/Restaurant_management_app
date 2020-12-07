@@ -7,13 +7,14 @@ using System.Windows.Forms;
 
 namespace Restaurant_management_app
 {
-    class Produkti_i_porositur
+    class ProduktiItem
     {
         public string ProduktiIPorositur { get; set; }
-        private int sasia_e_porosise;
-        public int Sasia_e_porosise
+
+        private int sasiaEPorosise;
+        public int SasiaEPorosise
         {
-            get { return sasia_e_porosise; }
+            get { return sasiaEPorosise; }
             set
             {
                 if (value < 1)
@@ -22,16 +23,19 @@ namespace Restaurant_management_app
                 }
                 else
                 {
-                    sasia_e_porosise = value;
+                    sasiaEPorosise = value;
                 }
             }
         }
+
         public decimal Cmimi { get; set; }
-        public Produkti_i_porositur() { }
-        public Produkti_i_porositur(string produkti, int sasia, decimal cmimi)
+
+        public ProduktiItem() { }
+
+        public ProduktiItem(string produkti, int sasia, decimal cmimi)
         {
             ProduktiIPorositur = produkti;
-            Sasia_e_porosise = sasia;
+            SasiaEPorosise = sasia;
             Cmimi = cmimi;
         }
     }

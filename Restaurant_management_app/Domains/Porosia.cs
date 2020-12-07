@@ -11,9 +11,10 @@ namespace Restaurant_management_app
     class Porosia
     {
         public int PorosiID { get; set; }
-        private int nr_i_tavolines; 
-        public int Nr_i_tavolines {
-            get  { return nr_i_tavolines; }
+
+        private int nrITavolines; 
+        public int NrITavolines {
+            get  { return nrITavolines; }
             set
             {
                 if (value<0)
@@ -22,32 +23,35 @@ namespace Restaurant_management_app
                 }
                 else
                 {
-                    nr_i_tavolines = value;
+                    nrITavolines = value;
                 }
             }
         }
+
         private decimal cmimiTotal = 0.0m;
 
-        Produkti_i_porositur produkti = new Produkti_i_porositur();
-        public static List<Produkti_i_porositur> Produktet { get; set; } = new List<Produkti_i_porositur>();
+        public ProduktiItem produkti { get; set; }
+
+        public List<ProduktiItem> Produktet = new List<ProduktiItem>();
 
         public Porosia() { }
         public Porosia(string produkti_i_porositur, int sasia_e_porosise)
         {
             produkti.ProduktiIPorositur = produkti_i_porositur;
-            produkti.Sasia_e_porosise = sasia_e_porosise;
+            produkti.SasiaEPorosise = sasia_e_porosise;
         }
 
-        public void ShtoProduktet(Produkti_i_porositur produkti)
+        public void ShtoProdukt(ProduktiItem produkti)
         {
             Produktet.Add(produkti);
         }
+
 
         public decimal KalkuloFakturen()
         {
             foreach (var item in Produktet)
             {
-                cmimiTotal += (item.Cmimi*item.Sasia_e_porosise);
+                cmimiTotal += (item.Cmimi*item.SasiaEPorosise);
             }
             return cmimiTotal;
         }

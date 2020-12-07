@@ -44,6 +44,7 @@ namespace Restaurant_management_app
         private void btnShtoProduktin_Click(object sender, EventArgs e)
         {
             ShtoProdukt();
+            txbCmimiTotal.Text = porosia.KalkuloFakturen().ToString();
         }
 
         private void btnPerfundoPorosin_Click(object sender, EventArgs e)
@@ -55,21 +56,22 @@ namespace Restaurant_management_app
 
         void ShtoProdukt()
         {
-            foreach (Ushqimi item in Menyja.Ushqimet)
+            foreach (Produkti item in Menyja.Ushqimet)
             {
                 if (comboProdukti.Text == item.Emri_i_ushqimit)
                 {
-                    Produkti_i_porositur produkti = new Produkti_i_porositur(comboProdukti.Text, int.Parse(txbSasia.Text), item.Cmimi_i_ushqimit);
-                    porosia.ShtoProduktet(produkti);
+                    ProduktiItem produkti = new ProduktiItem(comboProdukti.Text, int.Parse(txbSasia.Text), item.Cmimi_i_ushqimit);
+                    porosia.ShtoProdukt(produkti);
                 }
             }
-            
+
             txbSasia.Clear();
             comboProdukti.Text = "";
         }
         void PerfundoPorosi()
         {
-            porosia.Nr_i_tavolines = int.Parse(comboID.Text);  
+            porosia.NrITavolines = int.Parse(comboID.Text);
+            porosia.PorosiID++;
             ListaEPorosive.ShtoPorosi(porosia);
 
             comboID.Text = "";

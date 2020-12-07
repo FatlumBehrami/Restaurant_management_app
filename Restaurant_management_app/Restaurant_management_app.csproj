@@ -68,56 +68,57 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Klienti.cs" />
+    <Compile Include="Domains\Klienti.cs" />
     <Compile Include="Repository\ListaEPorosive.cs" />
     <Compile Include="Repository\ListaETavolinave.cs" />
-    <Compile Include="Porosia.cs" />
-    <Compile Include="Produkti_i_porositur.cs" />
-    <Compile Include="Regjistrimi_i_porosive.cs">
+    <Compile Include="Domains\Porosia.cs" />
+    <Compile Include="Domains\ProduktiItem.cs" />
+    <Compile Include="Forms\Regjistrimi_i_porosive.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Regjistrimi_i_porosive.Designer.cs">
+    <Compile Include="Forms\Regjistrimi_i_porosive.Designer.cs">
       <DependentUpon>Regjistrimi_i_porosive.cs</DependentUpon>
     </Compile>
-    <Compile Include="Regjistrimi_i_tavolinave.cs">
+    <Compile Include="Forms\Regjistrimi_i_tavolinave.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Regjistrimi_i_tavolinave.Designer.cs">
+    <Compile Include="Forms\Regjistrimi_i_tavolinave.Designer.cs">
       <DependentUpon>Regjistrimi_i_tavolinave.cs</DependentUpon>
     </Compile>
-    <Compile Include="Restauranti.cs">
+    <Compile Include="Forms\Restauranti.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Restauranti.Designer.cs">
+    <Compile Include="Forms\Restauranti.Designer.cs">
       <DependentUpon>Restauranti.cs</DependentUpon>
     </Compile>
-    <Compile Include="Regjistrimi_i_produkteve.cs">
+    <Compile Include="Forms\Regjistrimi_i_produkteve.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Regjistrimi_i_produkteve.Designer.cs">
+    <Compile Include="Forms\Regjistrimi_i_produkteve.Designer.cs">
       <DependentUpon>Regjistrimi_i_produkteve.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menyja.cs" />
-    <Compile Include="Statistikat.cs">
+    <Compile Include="Repository\Menyja.cs" />
+    <Compile Include="Domains\Sherbyesi.cs" />
+    <Compile Include="Forms\Statistikat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Statistikat.Designer.cs">
+    <Compile Include="Forms\Statistikat.Designer.cs">
       <DependentUpon>Statistikat.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ushqimi.cs" />
+    <Compile Include="Domains\Ushqimi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tavolina.cs" />
-    <EmbeddedResource Include="Regjistrimi_i_porosive.resx">
+    <Compile Include="Domains\Tavolina.cs" />
+    <EmbeddedResource Include="Forms\Regjistrimi_i_porosive.resx">
       <DependentUpon>Regjistrimi_i_porosive.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Regjistrimi_i_produkteve.resx">
+    <EmbeddedResource Include="Forms\Regjistrimi_i_produkteve.resx">
       <DependentUpon>Regjistrimi_i_produkteve.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Regjistrimi_i_tavolinave.resx">
+    <EmbeddedResource Include="Forms\Regjistrimi_i_tavolinave.resx">
       <DependentUpon>Regjistrimi_i_tavolinave.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Restauranti.resx">
+    <EmbeddedResource Include="Forms\Restauranti.resx">
       <DependentUpon>Restauranti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -130,7 +131,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Statistikat.resx">
+    <EmbeddedResource Include="Forms\Statistikat.resx">
       <DependentUpon>Statistikat.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
